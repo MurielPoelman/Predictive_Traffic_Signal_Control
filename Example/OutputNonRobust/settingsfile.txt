@@ -1,0 +1,45 @@
+PROCESS SETTINGS
+preprocessing	0
+
+ROLLING HORIZON SETTINGS
+controlIntLngth	6
+nrofDecisionInt	2
+nrofPredictionInt	10
+nrofSimInt	450
+controlIntIdx	0
+
+PREDICTION MODEL SETTINGS
+lossTime	3
+blockSignals	0
+headtail	1
+individualqueue	0
+individualdemand	1
+headtailSTAT	1
+individualqueueSTAT	0
+individualdemandSTAT	1
+
+OPTIMIZATION SETTINGS
+objdelay (1: delay; 0: TTS)	1
+suboptimal	0
+activateMethod (1 = BB; 2 = GA)	1
+BB: useTotalState	0
+BB: boundpercentage	6
+BB: boundabsolute	60
+BB: nrofLevelSearchNodes	5000
+
+ROBUST SETTINGS
+objrobust (1:non-robust; 2:single scenario; 3:minmax; 4:weightedaverage; 5:average)	1
+nrofScenarios	3
+scenarioWeight	0	0.2	0.7	0.1
+randomSaturationRates	0
+randomTravelTimes	0
+randomState	0
+randomDemand	0
+randomFractions	1
+nrofScenarioPeriods	3
+scenarioPeriods	[0,0]	[60,70]	[110,120]	[160,170]	[450,450]
+robustHeuristic	0
+nrofScenariosSubset	3
+scenarioActive	0	1	1	1
+scenarioLog	0
+
