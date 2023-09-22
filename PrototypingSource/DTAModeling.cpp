@@ -1,3 +1,21 @@
+/*
+Copyright(C) 2023 Royal HaskoningDHV / Delft University of Technology
+Author: Muriel Verkaik-Poelman (muriel.verkaik-poelman@rhdhv.com)
+
+This program is free software : you can redistribute it and /or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.If not, see http ://www.gnu.org/licenses/.
+*/
+
 #pragma warning(disable: 4503)
 #include "DTAModeling.h"
 
@@ -3046,7 +3064,7 @@ int main(int argc, char** argv)
 		if (!treefile.is_open()) { std::cout << "Error opening decisiontree.txt!" << std::endl; auto dummy = getchar();; return 1; }
 
 		std::ofstream treefileOUT; //open decision tree file for writing
-		treefileOUT.open("decisiontreeOUT.txt", std::ofstream::in);
+		treefileOUT.open("decisiontreeOUT.txt", std::ofstream::out);
 		if (!treefileOUT.is_open()) { std::cout << "Error opening decisiontreeOUT.txt!" << std::endl; auto dummy = getchar();; return 1; }
 
 		std::ifstream basicphasefile; //open basic structure control file for reading
@@ -3058,7 +3076,7 @@ int main(int argc, char** argv)
 		if (!phasefile.is_open()) { std::cout << "Error opening phases.txt!" << std::endl; auto dummy = getchar();; return 1; }
 
 		std::ofstream phasefileOUT; //open structure control file for writing
-		phasefileOUT.open("phasesOUT.txt", std::ofstream::in);
+		phasefileOUT.open("phasesOUT.txt", std::ofstream::out);
 		if (!phasefileOUT.is_open()) { std::cout << "Error opening phasesOUT.txt!" << std::endl; auto dummy = getchar();; return 1; }
 
 		std::ifstream signalfile; //open signal file for reading
